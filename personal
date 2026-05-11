@@ -1,8 +1,232 @@
- <div class="personal">
-  <i class="fa-solid fa-paint-brush service-icon"></i>
-  <h2>Web Design</h2>
-  <p>
-    Crafting visually appealing designs and user-friendly interfaces for a
-    seamless user experience.
-  </p>
-</div>
+ <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Menambahkan Font Poppins agar sesuai dengan CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Personal - ADE</title>
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">ADE</a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fa fa-bars"></i>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="personal.html" class="active">Personal</a>
+        <a href="skills.html">Skills</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <section class="personal-section">
+      <h1>About Me</h1>
+      
+      <!-- Wrapper untuk card grid -->
+      <div class="personal-grid">
+        
+        <div class="personal-card">
+          <i class="fa-solid fa-fingerprint service-icon"></i>
+          <h2>Who I Am</h2>
+          <p>
+            A passionate developer and creative thinker dedicated to building 
+            impactful and meaningful digital experiences.
+          </p>
+        </div>
+
+        <div class="personal-card">
+          <i class="fa-solid fa-laptop-code service-icon"></i>
+          <h2>My Journey</h2>
+          <p>
+            Years of experience in web development, transforming complex ideas 
+            into functional and aesthetic realities.
+          </p>
+        </div>
+
+        <div class="personal-card">
+          <i class="fa-solid fa-heart service-icon"></i>
+          <h2>Interests</h2>
+          <p>
+            Love exploring new technologies, UI/UX design trends, and creating 
+            content that connects with people.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <style>
+      body {
+        background-color: #191919;
+        color: white;
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        padding: 1rem 9%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      }
+
+      .logo {
+        font-size: 2.5rem;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      .menu-toggle {
+        display: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      nav {
+        display: flex;
+        gap: 2rem;
+      }
+
+      nav a {
+        color: white;
+        margin-left: 4rem;
+        font-size: 1.8rem;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        transition: 0.3s ease;
+      }
+
+      nav a:hover {
+        color: #e3651d;
+      }
+
+      nav a.active {
+        color: #e3651d;
+        border-bottom: 3px solid #e3651d;
+      }
+
+      /* ===== LAYOUT PERSONAL SECTION ===== */
+      .personal-section {
+        padding: 10rem 9% 5rem;
+        text-align: center;
+      }
+
+      .personal-section h1 {
+        font-size: 4rem;
+        margin-bottom: 5rem;
+      }
+
+      /* Grid untuk menaruh card berjajar */
+      .personal-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem;
+      }
+
+      /* Style Card Personal */
+      .personal-card {
+        background-color: #222;
+        padding: 4rem 2.5rem;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.3s ease;
+      }
+
+      .personal-card:hover {
+        background-color: #2a2a2a;
+        transform: translateY(-10px);
+        border-color: #e3651d;
+        box-shadow: 0 10px 20px rgba(227, 101, 29, 0.15);
+      }
+
+      .service-icon {
+        font-size: 4rem;
+        color: #e3651d;
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .personal-card:hover .service-icon {
+        transform: scale(1.1);
+      }
+
+      .personal-card h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .personal-card p {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        color: #bbb;
+      }
+
+      /* ===== RESPONSIF MOBILE ===== */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block;
+        }
+
+        nav {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 100%;
+          background-color: #333;
+          padding: 1rem 0;
+          z-index: 1000;
+        }
+
+        nav.active {
+          display: flex;
+        }
+
+        nav a {
+          margin: 1rem 0;
+          font-size: 1.6rem;
+          text-align: center;
+        }
+
+        /* Ubah grid jadi 1 kolom di HP */
+        .personal-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .personal-section h1 {
+          font-size: 3rem;
+        }
+
+        .service-icon {
+          font-size: 3rem;
+        }
+
+        .personal-card h2 {
+          font-size: 2rem;
+        }
+
+        .personal-card p {
+          font-size: 1.4rem;
+        }
+      }
+    </style>
+
+    <script>
+      const mobileMenu = document.getElementById("mobile-menu");
+      const nav = document.querySelector("nav");
+
+      mobileMenu.addEventListener("click", () => {
+        nav.classList.toggle("active");
+      });
+    </script>
+  </body>
+</html>
