@@ -1,7 +1,8 @@
- </div>
-      <div class="personal">
-        <i class="fa-solid fa-paint-brush service-icon"></i>
-        <h2>Web Design</h2>
-        <p>
-          Crafting visually appealing designs and user-friendly interfaces for a
-          seamless user experience.
+ <div class="personal">
+  <i class="fa-solid fa-paint-brush service-icon"></i>
+  <h2>Web Design</h2>
+  <p>
+    Crafting visually appealing designs and user-friendly interfaces for a
+    seamless user experience.
+  </p>
+</div>
