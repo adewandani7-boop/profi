@@ -55,10 +55,15 @@
             color: var(--gold);
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
         nav a {
             color: var(--white);
             text-decoration: none;
-            margin-left: 25px;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 0.95rem;
             transition: color 0.3s;
@@ -66,6 +71,23 @@
 
         nav a:hover {
             color: var(--gold);
+        }
+
+        /* Style untuk Tombol Kembali di Navbar */
+        .btn-back {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+
+        .btn-back:hover {
+            background-color: var(--gold);
+            color: var(--navy);
+            border-color: var(--gold);
         }
 
         /* =========================================
@@ -196,6 +218,29 @@
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             font-size: 0.9rem;
             margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* Style untuk Tombol Kembali di Footer */
+        .btn-back-footer {
+            background-color: transparent;
+            color: var(--gold);
+            border: 1px solid var(--gold);
+            padding: 10px 25px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-back-footer:hover {
+            background-color: var(--gold);
+            color: var(--navy);
         }
 
         /* =========================================
@@ -204,9 +249,8 @@
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
             .hero p { font-size: 1rem; }
-            header { flex-direction: column; text-align: center; }
-            nav { margin-top: 15px; }
-            nav a { margin: 0 10px; }
+            header { flex-direction: column; text-align: center; gap: 15px; }
+            nav { flex-wrap: wrap; justify-content: center; }
         }
     </style>
 </head>
@@ -217,9 +261,11 @@
         <div class="logo">PRESS<span>HUB</span></div>
         <nav>
             <a href="#">Beranda</a>
-            <a href="#">Layanan</a>
+            <a href="#layanan">Layanan</a>
             <a href="#">Klien</a>
             <a href="#">Kontak</a>
+            <!-- Tombol Kembali di Navbar -->
+            <a href="#" class="btn-back" onclick="history.back(); return false;">‹ Kembali</a>
         </nav>
     </header>
 
@@ -290,6 +336,8 @@
 
     <!-- Footer -->
     <footer>
+        <!-- Tombol Kembali di Footer -->
+        <a href="#" class="btn-back-footer" onclick="history.back(); return false;">← Kembali ke Halaman Sebelumnya</a>
         <p>&copy; 2024 PressHub Indonesia. Seluruh hak cipta dilindungi undang-undang.</p>
     </footer>
 
